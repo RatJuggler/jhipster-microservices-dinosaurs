@@ -1,0 +1,17 @@
+{
+  "generator-jhipster": {
+    "appsFolders": [
+      "jhipster-microservices-dinosaurs-catalogue",
+      "jhipster-microservices-dinosaurs-game",
+      "jhipster-microservices-dinosaurs-gateway",
+      "jhipster-microservices-dinosaurs-sighting"
+    ],
+    "directoryPath": "../",
+    "gatewayType": "zuul",
+    "clusteredDbApps": [],
+    "monitoring": "elk",
+    "consoleOptions": ["curator", "zipkin"],
+    "serviceDiscoveryType": "consul",
+    "jwtSecretKey": "NmYxNjRlOGU1ZTRiNDQ1M2M1MjkzOWVhODYwZmFiMzJmZjgzYTRiNzc4NjM1YWYzOGYxMThhODk5MjlkZDhjYmM4YjY0YWE5NDIxYjEyZDc2YTIzY2U2NWI1ZDViMWVjZDNkMQ=="
+  }
+}
