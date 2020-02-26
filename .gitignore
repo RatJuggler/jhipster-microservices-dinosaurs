@@ -144,3 +144,8 @@ Desktop.ini
 # ESLint
 ######################
 .eslintcache
+
+######################
+# LibreOffice
+######################
+.*odg#
