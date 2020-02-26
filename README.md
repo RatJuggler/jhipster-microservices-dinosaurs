@@ -5,6 +5,8 @@ with and deploy to various cloud providers and containers.
 
 Currently using JHipster [6.7.1](https://www.jhipster.tech/documentation-archive/v6.7.1).
 
+![Image of Services](https://raw.githubusercontent.com/RatJuggler/jhipster-microservices-dinosaurs/master/jhipster-microservices.png)
+
 ## Generation
 
 The gateway and microservices were all generated from a single [jdl](https://www.jhipster.tech/jdl/) 
