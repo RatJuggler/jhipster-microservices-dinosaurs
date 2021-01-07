@@ -9,16 +9,16 @@ It includes:
 - [Dinosaur Game Backend Microservice](https://github.com/RatJuggler/jhipster-microservices-dinosaurs-game)
 - [Dinosaur Sighting Microservice](https://github.com/RatJuggler/jhipster-microservices-dinosaurs-sighting)
 
-As the diagram indicates this results in a fair few docker containers to run (20) so if you are going to run everything locally make 
-sure that you have plenty of memory / swap space free. I was able to run everything on an i7 laptop using Ubuntu MATE 18.04 LTS with 
-16GB memory and 16GB swap space.
+As the diagram indicates this results in a fair few docker containers to run (20) so if you are going to run everything locally 
+make sure that you have plenty of memory / swap space free. I have been able to run everything on an i7 laptop using Ubuntu MATE 
+20.04 LTS with 16 GiB memory and 16 GiB swap space.
 
 ![Image of Services](https://raw.githubusercontent.com/RatJuggler/jhipster-microservices-dinosaurs/master/jhipster-microservices.png)
 
 ## Generation
 
 The gateway and microservices were all generated from a single [jdl](https://www.jhipster.tech/jdl/) 
-[file](https://github.com/RatJuggler/jhipster-jdl/blob/master/jhipster-microservices-dinosaurs.jh) using the following commands:
+[file](https://github.com/RatJuggler/jhipster-jdl/blob/master/jhipster-microservices-dinosaurs.jdl) using the following commands:
 
     mkdir jhipster-microservices-dinosaurs
     cd jhipster-microservices-dinosaurs
@@ -26,7 +26,7 @@ The gateway and microservices were all generated from a single [jdl](https://www
 
 The individual components were committed to git as submodules with this project as the parent.
 
-Currently using JHipster [6.7.1](https://www.jhipster.tech/documentation-archive/v6.7.1).
+Currently, using JHipster [6.10.5](https://www.jhipster.tech/documentation-archive/v6.10.5).
 
 ## Deployments
 
