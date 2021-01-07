@@ -8,19 +8,19 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - SPRING_CLOUD_CONSUL_HOST=consul
       - SPRING_CLOUD_CONSUL_PORT=8500
-      - 'SPRING_DATASOURCE_URL=jdbc:mysql://catalogue-mysql:3306/catalogue?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://catalogue-mysql:3306/catalogue?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true'
       - JHIPSTER_SLEEP=30
       - 'SPRING_DATA_JEST_URI=http://catalogue-elasticsearch:9200'
       - 'SPRING_ELASTICSEARCH_REST_URIS=http://catalogue-elasticsearch:9200'
   catalogue-mysql:
-    image: 'mysql:8.0.19'
+    image: 'mysql:8.0.20'
     environment:
       - MYSQL_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=catalogue
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
   catalogue-elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.6'
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.8'
     environment:
       - ES_JAVA_OPTS=-Xms1024m -Xmx1024m
       - discovery.type=single-node
@@ -33,10 +33,10 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - SPRING_CLOUD_CONSUL_HOST=consul
       - SPRING_CLOUD_CONSUL_PORT=8500
-      - 'SPRING_DATASOURCE_URL=jdbc:mysql://game-mysql:3306/game?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://game-mysql:3306/game?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true'
       - JHIPSTER_SLEEP=30
   game-mysql:
-    image: 'mysql:8.0.19'
+    image: 'mysql:8.0.20'
     environment:
       - MYSQL_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
@@ -51,7 +51,7 @@ services:
       - MANAGEMENT_METRICS_EXPORT_PROMETHEUS_ENABLED=true
       - SPRING_CLOUD_CONSUL_HOST=consul
       - SPRING_CLOUD_CONSUL_PORT=8500
-      - 'SPRING_DATASOURCE_URL=jdbc:mysql://gateway-mysql:3306/gateway?useUnicode=true&characterEncoding=utf8&useSSL=false&createDatabaseIfNotExist=true'
+      - 'SPRING_DATASOURCE_URL=jdbc:mysql://gateway-mysql:3306/gateway?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true'
       - JHIPSTER_SLEEP=30
       - 'SPRING_DATA_JEST_URI=http://gateway-elasticsearch:9200'
       - 'SPRING_ELASTICSEARCH_REST_URIS=http://gateway-elasticsearch:9200'
@@ -59,14 +59,14 @@ services:
     ports:
       - '8080:8080'
   gateway-mysql:
-    image: 'mysql:8.0.19'
+    image: 'mysql:8.0.20'
     environment:
       - MYSQL_USER=root
       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
       - MYSQL_DATABASE=gateway
     command: mysqld --lower_case_table_names=1 --skip-ssl --character_set_server=utf8mb4 --explicit_defaults_for_timestamp
   gateway-elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.6'
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.8'
     environment:
       - ES_JAVA_OPTS=-Xms1024m -Xmx1024m
       - discovery.type=single-node
@@ -85,9 +85,9 @@ services:
       - 'SPRING_DATA_JEST_URI=http://sighting-elasticsearch:9200'
       - 'SPRING_ELASTICSEARCH_REST_URIS=http://sighting-elasticsearch:9200'
   sighting-mongodb:
-    image: 'mongo:4.0.16'
+    image: 'mongo:4.2.7'
   sighting-elasticsearch:
-    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.6'
+    image: 'docker.elastic.co/elasticsearch/elasticsearch:6.8.8'
     environment:
       - ES_JAVA_OPTS=-Xms1024m -Xmx1024m
       - discovery.type=single-node

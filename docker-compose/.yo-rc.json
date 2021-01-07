@@ -12,6 +12,6 @@
     "monitoring": "elk",
     "consoleOptions": ["curator", "zipkin"],
     "serviceDiscoveryType": "consul",
-    "jwtSecretKey": "NmYxNjRlOGU1ZTRiNDQ1M2M1MjkzOWVhODYwZmFiMzJmZjgzYTRiNzc4NjM1YWYzOGYxMThhODk5MjlkZDhjYmM4YjY0YWE5NDIxYjEyZDc2YTIzY2U2NWI1ZDViMWVjZDNkMQ=="
+    "jwtSecretKey": "ZWI2YjU2Y2IxYzdjZGIwNmY4NjhmYWM4OGE1Y2Y0Y2QzMDU2YzlhZTcyZWYzNTI1OWVmNDYyZDA4YmMzMzU2OGYyMGEzMjRkOTk0MzM4NTc5NWY1N2E3NDBlODIwYzM2YWI1ZQ=="
   }
 }
